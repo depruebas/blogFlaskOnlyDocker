@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   nginx:
     # Nombre que le damos al contenedor
