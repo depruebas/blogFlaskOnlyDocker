@@ -55,9 +55,6 @@ RUN ln -s /usr/bin/python3 /usr/bin/python
 RUN ln -s /home/devuser/nginx.conf  /etc/nginx/sites-enabled/nginx.conf
 RUN ln -s /home/devuser/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
-# Borramos el site por defecto de nginx para que no de error con el nuestro
-RUN rm /etc/nginx/sites-enabled/default
-
 # Instalar Node.js (ejemplo: v20.x LTS) cambiar si hay versiones LTS mas recientes
 RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash - && \
     apt-get update && apt-get install -y nodejs && \
